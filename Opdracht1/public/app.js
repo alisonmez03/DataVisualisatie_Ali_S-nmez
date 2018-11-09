@@ -36,6 +36,8 @@ settingrequest.send();
 
 //start sketch
 var s = function( sketch ) {
+    let min = Number.POSITIVE_INFINITY;
+    let max = 0;
   
     sketch.setup = function() {
         const w = document.getElementById(settings.vizid).offsetWidth;
@@ -55,6 +57,7 @@ var s = function( sketch ) {
           let rad = sketch.map(index, 0, nasa.data.length,0,2*sketch.PI);
           let val = nasa.data[index].mass;
           let radius = val;
+        //  let radius = sketch.map(val,?,?,0,w/2);
           let x = sketch.sin(rad)*radius;
           let y = sketch.cos(rad)*radius;
 
