@@ -1,5 +1,11 @@
 var nasa = {};
 
+var settingrequest = new XMLHttpRequest();
+settingrequest.open('GET', '/settings', true);
+settingrequest.onload = function () {
+    var settings = JSON.parse(this.response);
+    console.log(settings);
+
 var datarequest = new XMLHttpRequest();
 datarequest.open('GET', '/data', true);
 datarequest.onload = function () {
@@ -16,7 +22,7 @@ datarequest.onload = function () {
     document.getElementById("data").innerHTML = str;
     //assign globals
     nasa.data = data.nasa;
-}
-
-// Send request
+}// Send request
 datarequest.send();
+}
+settingrequest.send();
