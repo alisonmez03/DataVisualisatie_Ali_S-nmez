@@ -1,4 +1,4 @@
-name,id,nametype,recclass,mass (g),fall,year,reclat,reclong,GeoLocation
+name,id,nametype,recclass,mass,fall,year,reclat,reclong,GeoLocation
 Aachen,1,Valid,L5,21,Fell,01/01/1880 12:00:00 AM,50775000,6083330,"(50.775000, 6.083330)"
 Aarhus,2,Valid,H6,720,Fell,01/01/1951 12:00:00 AM,56183330,10233330,"(56.183330, 10.233330)"
 Abee,6,Valid,EH4,107000,Fell,01/01/1952 12:00:00 AM,54216670,-113000000,"(54.216670, -113.000000)"
