@@ -54,7 +54,9 @@
         <node name="multiply3" position="1.00,6.00" prototype="math.multiply">
             <port name="value2" type="float" value="0.7"/>
         </node>
-        <node name="multiply4" position="-11.00,8.00" prototype="math.multiply"/>
+        <node name="multiply4" position="-11.00,7.00" prototype="math.multiply">
+            <port name="value2" type="float" value="1.2"/>
+        </node>
         <node name="range1" position="9.00,11.00" prototype="math.range"/>
         <node name="rect1" position="1.00,8.00" prototype="corevector.rect">
             <port name="position" type="point" value="262.43,76.90"/>
@@ -71,7 +73,7 @@
         <node name="round1" position="-3.00,7.00" prototype="math.round"/>
         <node name="round2" position="-12.00,6.00" prototype="math.round"/>
         <node name="slice1" position="-5.00,0.00" prototype="list.slice">
-            <port name="size" type="int" value="110"/>
+            <port name="size" type="int" value="100"/>
         </node>
         <node name="textpath1" position="-7.00,7.00" prototype="corevector.textpath">
             <port name="font_name" type="string" value="SFProText-LightItalic"/>
@@ -102,14 +104,14 @@
         <conn input="rect1.width" output="multiply3"/>
         <conn input="lookup4.list" output="slice1"/>
         <conn input="round2.value" output="lookup4"/>
-        <conn input="multiply4.value1" output="round2"/>
         <conn input="compound1.shape2" output="align1"/>
         <conn input="compound2.shape2" output="compound1"/>
         <conn input="compound2.shape1" output="align2"/>
-        <conn input="arc1.width" output="multiply4"/>
         <conn input="align2.shape" output="arc1"/>
         <conn input="compound1.shape1" output="textpath1"/>
         <conn input="rotate1.shape" output="compound2"/>
         <conn input="arc1.start_angle" output="frame1"/>
+        <conn input="multiply4.value1" output="round2"/>
+        <conn input="arc1.width" output="multiply4"/>
     </node>
 </ndbx>
